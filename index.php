@@ -54,6 +54,7 @@ addToOutputScript(array(
 	'mysqldump -h ' . $aFormValues['aws-db-server']
 	. ' -u ' . $aFormValues['aws-db-username']
 	. ' --password=' . $aFormValues['aws-db-password']
+	. ' --routines'
 	. ' ' . $aFormValues['aws-db-database']
 	. ' > ' . WRITE_DIR . $sFilename
 ,	'rm -rf ' . WRITE_DIR . SCRIPT_FILENAME
